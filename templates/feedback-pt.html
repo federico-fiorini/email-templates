@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Redefinir senha</title>
+    <title>Feedback</title>
     <style>
 
         html,
@@ -43,7 +43,11 @@
         }
 
         #content {
-            width: 100%;
+            max-width: 90%;
+            margin: 30px 5%;
+            padding: 30px;
+            background: url("http://i.imgur.com/qS2cM0N.png") no-repeat center;
+            background-size: cover;
         }
 
         p {
@@ -74,7 +78,6 @@
             left: 0;
             width: 100%;
             text-align: center;
-            margin-top: 50px;
         }
 
         #footer>div {
@@ -95,7 +98,13 @@
             margin-top: 10px;
         }
 
-        @media only screen and (max-width: 500px) {
+        #wrapper {
+            background-color: rgba(255,255,255,0.75);
+            width: 40%;
+            padding: 10px;
+        }
+
+        @media only screen and (max-width: 800px) {
             h1 {
                 font-size: 18px;
             }
@@ -115,6 +124,14 @@
             .fb {
                 margin-bottom: -5px;
             }
+
+            #content {
+                padding: 5%;
+            }
+
+            #wrapper {
+                width: 95%;
+            }
         }
 
         @media (max-height: 1000px) {
@@ -130,16 +147,17 @@
         <div id="header">
             <img class="logo" src="http://i.imgur.com/eLYljGR.png">
             <hr>
-            <h1>REDEFINIR SENHA</h1>
+            <h1>AGORA JÁ ESTÁ TD LIMPO </h1>
             <hr>
         </div>
 
         <div id="content">
-            <p>Olá [user.name]!</p>
-            <p>Você nos informou que esqueceu sua senha, para redefinir sua senha clique no botão :</p>
-            <p style="text-align: center; padding: 20px;"><a href="[resetPasswordUrl]" class="btn">MUDAR SENHA</a></p>
-            <br>
-            <p>Se você não requisitou isso, apenas ignore este e-mail.</p>
+            <div id="wrapper">
+                <p>Muito obrigado por utilizar os serviços da td limpo e esperamos poder te atender muitas outras vezes.</p>
+                <p>Gostaríamos de saber sua opinião sobre o serviço para que possamos melhora-lo cada vez mais.</p>
+                <p>O formulário tem apenas 5 perguntinhas e não custará muito do seu tempo.</p>
+                <p style="text-align: center; padding: 20px;"><a href="[feedbackUrl]" class="btn">RESPONDER</a></p>
+            </div>
         </div>
 
         <div id="footer">
