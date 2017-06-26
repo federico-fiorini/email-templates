@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <style>
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            background-color: #4DC194;
+            color: #3D3D3D;
+        }
+
+        h1 {
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-size: 26px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #4DC194;
+        }
+
+        #background {
+            background-color: #FFFFFF;
+            margin: 50px 30px;
+            padding-bottom: 30px;
+        }
+
+
+        #header {
+            width: 100%;
+            text-align: center;
+        }
+
+        hr {
+            width: 90%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 90%;
+            margin: 30px 5%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .bottom-content,
+        .middle-content {
+            padding-top: 0;
+        }
+
+        .bottom-content p {
+            text-align: left;
+        }
+
+        #intro-text {
+            margin: 20px 10%;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin: 20px;
+        }
+
+        .order-info {
+            float: left;
+            width: 30%;
+            text-align: left;
+            padding: 0 10%;
+            margin-bottom: 20px;
+        }
+
+        .order-info p span {
+            margin: 3px 0;
+        }
+
+        .order-info h2 {
+            margin: 10px 0;
+        }
+
+        .info-label {
+            float: left;
+            width: 40%;
+        }
+
+        .info-value {
+            float: left;
+            width: 60%;
+        }
+
+        #service {
+            width: 90%;
+            margin: 0 5%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        #service tr td,
+        #service tr th {
+            padding: 5px;
+        }
+
+        tr.line-under th,
+        tr.line-under td {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        th.text-right {
+            text-align: right;
+        }
+
+        .btn {
+            color: #000000;
+            font-size: 20px;
+            background: #4DC194;
+            padding: 10px 20px 10px 20px;
+            border: solid #000000 2px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            text-decoration: none;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        #footer>div {
+            margin: 20px 8%;
+        }
+        #footer>div>a {
+            text-decoration: none;
+            color: #3D3D3D;
+        }
+
+        .fb {
+            max-height: 18px;
+            border-radius: 3px;
+        }
+
+        #facebook {
+            display: inline;
+            margin-top: 10px;
+        }
+
+
+        @media only screen and (max-width: 800px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            .btn {
+                font-size: 16px;
+            }
+
+            #facebook {
+                display: none;
+            }
+
+            #footer {
+                font-size: 12px;
+            }
+
+            .fb {
+                margin-bottom: -5px;
+            }
+
+            .content {
+                padding: 5%;
+            }
+
+            .order-info {
+                width: 80%;
+            }
+
+        }
+
+        @media (max-height: 1000px) {
+            #footer {
+                position: relative;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="background">
+        <div id="header">
+            <img class="logo" src="http://i.imgur.com/eLYljGR.png">
+            <hr>
+            <h1>Seu pagamento foi aprovado!</h1>
+            <hr>
+        </div>
+
+        <div class="content top-content">
+
+            <p id="intro-text">Olá [user.name]! Seu pagamento foi aprovado e sua reserva confirmada. A partir deste momento seu pedido está agendado. Qualquer dúvida utilize um de nossos canais de atendimento.</p>
+
+            <div class="order-info">
+                <h2>PEDIDO</h2>
+                <p><span class="info-label">Número:</span><span class="info-value">[order.number]</span></p>
+                <p><span class="info-label">Tempo:</span><span class="info-value">[order.hours] horas</span></p>
+                <p><span class="info-label">Extras:</span><span class="info-value">[order.extras]</span></p>
+            </div>
+
+            <div class="order-info">
+                <h2>DATA AGENDADA</h2>
+                <p><span class="info-label">Data:</span><span class="info-value">[order.date]</span></p>
+                <p><span class="info-label">Início:</span><span class="info-value">[order.date.startTime]</span></p>
+                <p><span class="info-label">Fim:</span><span class="info-value">[order.date.endTime]</span></p>
+            </div>
+
+            <div class="order-info">
+                <h2>ENDEREÇO DE SERVIÇO</h2>
+                <p><span class="info-label">End:</span><span class="info-value">[address]</span></p>
+                <p><span class="info-label">Bairro:</span><span class="info-value">[address.district]</span></p>
+                <p><span class="info-label">Cidade:</span><span class="info-value">[address.city]</span></p>
+            </div>
+
+            <div class="order-info">
+                <h2>PROFISSIONAL</h2>
+                <p><span class="info-label">Nome:</span><span class="info-value">[cleaner.name]</span></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="content middle-content">
+            <h2>SUA COMPRA</h2>
+
+            <table id="service">
+                <tr class="line-under">
+                    <th colspan="2">Serviço</th>
+                    <th>Qtd.</th>
+                    <th>Preço Unitário</th>
+                    <th>Preço Total</th>
+                </tr>
+                <tr class="line-under">
+                    <td colspan="2">HORAS DE FAXINA</td>
+                    <td>[order.hours]</td>
+                    <td>R$ [order.unitPrice]</td>
+                    <td>R$ [order.totalPrice]</td>
+                </tr>
+                <tr>
+                    <th colspan="4" class="text-right">Valor Total da Compra</th>
+                    <th>R$ [order.totalPrice]</th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="text-right">Forma de Pagamento</th>
+                    <th>[order.paymentMethod]</th>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="content bottom-content">
+            <h2>INFORMAÇÕES IMPORTANTES</h2>
+
+            <p>Você pode <b>incluir horas de serviço</b>, caso necessário, durante a prestação do serviço. Basta contatar-nos via e-mail e fazer a solicitação.</p>
+            <p>A faxineira sugere que se tenha, no mínimo: <b>balde, vassoura, rodo, bucha, detergente, diversos panos de limpeza, desinfetante, álcool e água sanitária</b>. A falta de qualquer um desses produtos pode comprometer a qualidade do serviço prestado.</p>
+            <p>Qualquer problema na reserva ou com a prestadora de serviço, por favor, entre em contato conosco que faremos o possível para solucionar o problema.</p>
+            <p>Seu pedido pode ser alterado ou cancelado <b>sem nenhum custo adicional</b> quando feito com mais de <b>24 horas de antecedência</b>. Até 3 horas antes do horário agendado, o cancelamento custará uma taxa de R$ 40,00.</p>
+            <p>A prestadora de serviços tem como objetivo realizar todas as tarefas de limpeza solicitadas, porém o serviço depende das condições da casa, portanto ela pode levar mais tempo que o necessário. Nesses casos o cliente deve solicitar a extensão do tempo da faxina ou pedir o interrompimento da mesma quando o tempo comprado acabar.</p>
+        </div>
+
+
+
+        <div id="footer">
+            <hr>
+            <div style="float: left; margin-right: 0;">Visite nosso <a href="https://www.tdlimpo.com/">WEBSITE</a></div>
+            <div style="float: right; margin-left: 0;">Siga nosso <a href="https://www.facebook.com/empresatdlimpo">
+                <span id="facebook">FACEBOOK</span> <img class="fb" src="http://i.imgur.com/OwxrtsT.png"></a>
+            </div>
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
