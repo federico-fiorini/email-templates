@@ -20,7 +20,7 @@
             font-size: 26px;
             font-style: normal;
             font-variant: normal;
-            font-weight: 500;
+            font-weight: bold;
             margin: 10px;
         }
 
@@ -53,6 +53,10 @@
             text-align: center;
         }
 
+        .top-content {
+            margin-top: 0;
+        }
+
         .bottom-content,
         .middle-content {
             padding-top: 0;
@@ -79,8 +83,13 @@
             margin-bottom: 20px;
         }
 
-        .order-info p span {
+        .order-info div span {
             margin: 3px 0;
+        }
+
+        .order-info div {
+            width: 100%;
+            float: left;
         }
 
         .order-info h2 {
@@ -132,9 +141,9 @@
         }
 
         #footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*left: 0;*/
             width: 100%;
             text-align: center;
         }
@@ -181,12 +190,17 @@
 
             .content {
                 padding: 5%;
+                margin: 0;
             }
 
             .order-info {
                 width: 80%;
             }
 
+            /*.order-info,*/
+            /*#service {*/
+                /*font-size: 12px;*/
+            /*}*/
         }
 
         @media (max-height: 1000px) {
@@ -212,28 +226,28 @@
 
             <div class="order-info">
                 <h2>PEDIDO</h2>
-                <p><span class="info-label">Número:</span><span class="info-value">[order.number]</span></p>
-                <p><span class="info-label">Tempo:</span><span class="info-value">[order.hours] horas</span></p>
-                <p><span class="info-label">Extras:</span><span class="info-value">[order.extras]</span></p>
+                <div><span class="info-label">Número:</span><span class="info-value">[order.number]</span></div>
+                <div><span class="info-label">Tempo:</span><span class="info-value">[order.hours] horas</span></div>
+                <div><span class="info-label">Extras:</span><span class="info-value">[order.extras]</span></div>
             </div>
 
             <div class="order-info">
                 <h2>DATA AGENDADA</h2>
-                <p><span class="info-label">Data:</span><span class="info-value">[order.date]</span></p>
-                <p><span class="info-label">Início:</span><span class="info-value">[order.startTime]</span></p>
-                <p><span class="info-label">Fim:</span><span class="info-value">[order.endTime]</span></p>
+                <div><span class="info-label">Data:</span><span class="info-value">[order.date]</span></div>
+                <div><span class="info-label">Início:</span><span class="info-value">[order.startTime]</span></div>
+                <div><span class="info-label">Fim:</span><span class="info-value">[order.endTime]</span></div>
             </div>
 
             <div class="order-info">
                 <h2>ENDEREÇO DE SERVIÇO</h2>
-                <p><span class="info-label">End:</span><span class="info-value">[address]</span></p>
-                <p><span class="info-label">Bairro:</span><span class="info-value">[address.district]</span></p>
-                <p><span class="info-label">Cidade:</span><span class="info-value">[address.city]</span></p>
+                <div><span class="info-label">End:</span><span class="info-value">[address]</span></div>
+                <div><span class="info-label">Bairro:</span><span class="info-value">[address.district]</span></div>
+                <div><span class="info-label">Cidade:</span><span class="info-value">[address.city]</span></div>
             </div>
 
             <div class="order-info">
                 <h2>PROFISSIONAL</h2>
-                <p><span class="info-label">Nome:</span><span class="info-value">[cleaner.name]</span></p>
+                <div><span class="info-label">Nome:</span><span class="info-value">[cleaner.name]</span></div>
             </div>
         </div>
 
@@ -277,8 +291,6 @@
             <p>Seu pedido pode ser alterado ou cancelado <b>sem nenhum custo adicional</b> quando feito com mais de <b>24 horas de antecedência</b>. Até 3 horas antes do horário agendado, o cancelamento custará uma taxa de R$ 40,00.</p>
             <p>A prestadora de serviços tem como objetivo realizar todas as tarefas de limpeza solicitadas, porém o serviço depende das condições da casa, portanto ela pode levar mais tempo que o necessário. Nesses casos o cliente deve solicitar a extensão do tempo da faxina ou pedir o interrompimento da mesma quando o tempo comprado acabar.</p>
         </div>
-
-
 
         <div id="footer">
             <hr>
